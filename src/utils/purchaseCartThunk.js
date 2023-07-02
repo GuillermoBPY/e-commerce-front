@@ -15,7 +15,8 @@ export const purchaseCartThunk = () => (dispatch) => {
     confirmButtonText: "Yes, buy it!",
   }).then((result) => {
     if (result.isConfirmed) {
-      const url = "http://localhost:8080/api/v1/purchases";
+      const url =
+        "https://e-commerce-api-zove.onrender.com/api/v1/purchases";
       axios
         .post(url, {}, config)
         .then((res) => {

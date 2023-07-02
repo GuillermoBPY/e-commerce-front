@@ -13,7 +13,8 @@ export const { setProducts } = productsSlice.actions;
 export default productsSlice.reducer;
 
 export const getAllProductsThunk = () => (dispatch) => {
-  const url = "http://localhost:8080/api/v1/products";
+  const url =
+    "https://e-commerce-api-zove.onrender.com/api/v1/products";
 
   axios
     .get(url)

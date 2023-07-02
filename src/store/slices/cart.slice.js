@@ -15,7 +15,8 @@ export default cartSlice.reducer;
 
 export const getCartThunk = () => (dispatch) => {
   if (localStorage.getItem("token")) {
-    const url = "http://localhost:8080/api/v1/cart";
+    const url =
+      "https://e-commerce-api-zove.onrender.com/api/v1/cart";
 
     axios
       .get(url, config)

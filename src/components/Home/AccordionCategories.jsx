@@ -9,7 +9,8 @@ const AccordionCategories = ({
   setIsActive,
 }) => {
   const getAllCategories = () => {
-    const url = "http://localhost:8080/api/v1/categories";
+    const url =
+      "https://e-commerce-api-zove.onrender.com/api/v1/categories";
 
     axios
       .get(url)
@@ -17,7 +18,7 @@ const AccordionCategories = ({
       .catch((err) => err);
   };
   const getProductsByName = (data = "title=") => {
-    const url = `http://localhost:8080/api/v1/products?${data}`;
+    const url = `https://e-commerce-api-zove.onrender.com/api/v1/products?${data}`;
 
     axios
       .get(url)

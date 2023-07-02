@@ -12,7 +12,8 @@ const LoginPage = () => {
     useState();
 
   const submit = (data) => {
-    const url = "http://localhost:8080/api/v1/users/login";
+    const url =
+      "https://e-commerce-api-zove.onrender.com/api/v1/users/login";
     axios
       .post(url, data)
       .then((res) => {

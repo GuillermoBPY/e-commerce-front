@@ -5,7 +5,8 @@ import config from "../store/slices/getConfig";
 
 export const addCartItemThunk =
   (id, counter) => (dispatch) => {
-    const url = "http://localhost:8080/api/v1/cart";
+    const url =
+      "https://e-commerce-api-zove.onrender.com/api/v1/cart";
     const data = {
       quantity: counter || 1,
       productId: id,

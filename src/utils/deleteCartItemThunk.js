@@ -15,7 +15,7 @@ export const deleteCartItemThunk = (id) => (dispatch) => {
     confirmButtonText: "Yes, remove it!",
   }).then((result) => {
     if (result.isConfirmed) {
-      const url = `http://localhost:8080/api/v1/cart/${id}`;
+      const url = `https://e-commerce-api-zove.onrender.com/api/v1/cart/${id}`;
       axios
         .delete(url, config)
         .then((res) => {

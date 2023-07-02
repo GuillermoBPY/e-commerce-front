@@ -14,7 +14,8 @@ const RegisterPage = () => {
   } = useForm();
   const navigate = useNavigate();
   const submit = (data) => {
-    const url = "http://localhost:8080/api/v1/users";
+    const url =
+      "https://e-commerce-api-zove.onrender.com/api/v1/users";
     axios
       .post(url, data)
       .then((res) => {

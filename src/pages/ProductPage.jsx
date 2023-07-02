@@ -10,7 +10,7 @@ import "../styles/ProductPage.css";
 const ProductPage = () => {
   const [product, setproduct] = useState();
   const { id } = useParams();
-  const url = `http://localhost:8080/api/v1/products/${id}`;
+  const url = `https://e-commerce-api-zove.onrender.com/api/v1/products/${id}`;
 
   useEffect(() => {
     axios
