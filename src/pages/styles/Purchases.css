@@ -1,0 +1,9 @@
+.purchase__container {
+  height: 100%;
+  padding: 5rem 0 7rem;
+}
+.purchase__cardbox {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}

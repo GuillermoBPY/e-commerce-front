@@ -1,0 +1,14 @@
+@import "../../../styles/index.css";
+
+.similarproducts {
+  padding: 2rem 0rem 6rem;
+  height: 100%;
+}
+
+.similarproducts__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
+  gap: 2rem;
+  padding: 1rem 0rem;
+  justify-items: center;
+}

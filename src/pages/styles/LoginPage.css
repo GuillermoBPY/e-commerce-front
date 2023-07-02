@@ -1,0 +1,90 @@
+@import "../../styles/index.css";
+
+.loginpage__container {
+  height: 100vh;
+  display: grid;
+  place-content: center;
+}
+.loginpage__login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.loginpage__login img {
+  max-width: 200px;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 700px) {
+  .loginpage__login img {
+    max-width: 250px;
+  }
+}
+.loginpage__login ul {
+  line-height: 1.5rem;
+}
+
+.loginpage__login ul li {
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--maincolor);
+  display: flex;
+  align-items: center;
+  align-content: center;
+  gap: 0.5rem;
+}
+
+.loginpage__login ul span:first-child {
+  display: flex;
+  color: var(--maincolor);
+  font-size: 1.5rem;
+}
+
+.loginpage_btn {
+  margin: 1rem;
+  color: var(--darkgray);
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+.loginpage__userlogin {
+  height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+.btn__box {
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.btn__box button {
+  font-size: 1rem;
+}
+.loginpage__userlogin form {
+  padding: 1rem;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.inputbox {
+  display: grid;
+  grid-template-columns: 100px 250px;
+  align-items: center;
+}
+
+.testeruser {
+  filter: brightness(0.8);
+  text-align: center;
+}

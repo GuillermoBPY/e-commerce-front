@@ -1,0 +1,55 @@
+.cartitem {
+  border: 1px solid var(--maincolor);
+  display: flex;
+  flex-direction: column;
+  width: calc(100vw - 16px);
+  max-width: 500px;
+  padding: 0.5rem;
+  gap: 1rem;
+  border-radius: 10px;
+}
+
+.cartitem header {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.cartitem header img {
+  width: 100px;
+  height: 100px;
+  aspect-ratio: 1;
+  object-fit: contain;
+}
+
+.cartitem header div {
+  width: 100%;
+}
+
+.cartitem footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cartitem footer ul,
+.cartitem footer ul li {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-weight: 700;
+}
+
+.cartitem footer ul li {
+  border: 1px solid grey;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.deletebtn {
+  border-radius: 10px;
+  background-color: rgb(154, 14, 14);
+  font-size: 1.2rem;
+  height: 50px;
+  width: 50px;
+  align-self: flex-end;
+}

@@ -1,0 +1,27 @@
+@import "../../../styles/index.css";
+
+.footer {
+  background-color: var(--darkgray);
+  width: 100%;
+  color: var(--maincolor);
+  text-align: center;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  height: 90px;
+  position: absolute;
+  bottom: 0;
+}
+
+.footer ul {
+  line-height: 1.7rem;
+}
+.footer ul li {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+}
