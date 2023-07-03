@@ -6,7 +6,6 @@ import AccordionPrice from "../components/Home/AccordionPrice";
 import CardProduct from "../components/Home/CardProduct";
 import LoadingPage from "../components/shared/LoadingPage";
 import "./styles/Home.css";
-require("dotenv").config();
 
 const Home = () => {
   const { products } = useSelector((state) => state);
@@ -21,7 +20,9 @@ const Home = () => {
   });
 
   const getProductsByName = (data = "title=") => {
-    const url = `${process.env.BASE_URL}/products?${data}`;
+    const url = `${
+      import.meta.env.VITE_BASE_URL
+    }/products?${data}`;
 
     axios
       .get(url)

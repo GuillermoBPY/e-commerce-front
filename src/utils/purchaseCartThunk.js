@@ -2,7 +2,7 @@ import axios from "axios";
 import Swal from "sweetalert2";
 import { getCartThunk } from "../store/slices/cart.slice";
 import config from "../store/slices/getConfig";
-require("dotenv").config();
+
 export const purchaseCartThunk = () => (dispatch) => {
   Swal.fire({
     scrollbarPadding: false,
@@ -15,7 +15,9 @@ export const purchaseCartThunk = () => (dispatch) => {
     confirmButtonText: "Yes, buy it!",
   }).then((result) => {
     if (result.isConfirmed) {
-      const url = `${process.env.BASE_URL}/purchase`;
+      const url = `${
+        import.meta.env.VITE_BASE_URL
+      }/purchase`;
       axios
         .post(url, {}, config)
         .then((res) => {

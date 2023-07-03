@@ -1,6 +1,5 @@
 import axios from "axios";
 import React, { useEffect } from "react";
-require("dotenv").config();
 
 const AccordionCategories = ({
   setfilteredProducts,
@@ -10,7 +9,9 @@ const AccordionCategories = ({
   setIsActive,
 }) => {
   const getAllCategories = () => {
-    const url = `${process.env.BASE_URL}/categories`;
+    const url = `${
+      import.meta.env.VITE_BASE_URL
+    }/categories`;
 
     axios
       .get(url)
@@ -18,8 +19,10 @@ const AccordionCategories = ({
       .catch((err) => err);
   };
   const getProductsByName = (data = "title=") => {
-    const url = `${process.env.BASE_URL}/products?${data}`;
-
+    const url = `${
+      import.meta.env.VITE_BASE_URL
+    }/products?${data}`;
+    console.log(url);
     axios
       .get(url)
       .then((res) => setfilteredProducts(res.data))
@@ -27,7 +30,7 @@ const AccordionCategories = ({
   };
 
   const handleClick = (categoryId) => {
-    getProductsByName(`categoryId=${categoryId}`);
+    getProductsByName(`category=${categoryId}`);
   };
   const accordionData = {
     title: "Categories",

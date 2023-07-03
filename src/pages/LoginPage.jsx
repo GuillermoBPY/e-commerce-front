@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import defaultValues from "../utils/defaultValues";
 import "./styles/LoginPage.css";
 import Swal from "sweetalert2";
-require("dotenv").config();
+
 const LoginPage = () => {
   const { register, handleSubmit, reset } = useForm();
   const [userdata, setuserdata] = useState();
@@ -13,7 +13,9 @@ const LoginPage = () => {
     useState();
 
   const submit = (data) => {
-    const url = `${process.env.BASE_URL}/users/login`;
+    const url = `${
+      import.meta.env.VITE_BASE_URL
+    }/users/login`;
     axios
       .post(url, data)
       .then((res) => {
@@ -121,9 +123,7 @@ const LoginPage = () => {
         <form onSubmit={handleSubmit(submit)}>
           <h2>User Login</h2>
           <div className="testeruser">
-            <p>Tester User</p>
-            <p>luciablack@gmail.com</p>
-            <p>g061552101</p>
+            <p>You must have and account!</p>
           </div>
           <div className="inputbox">
             <label htmlFor="email">Email</label>

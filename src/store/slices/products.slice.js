@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
-require("dotenv").config();
 
 const productsSlice = createSlice({
   name: "products",
@@ -14,7 +13,7 @@ export const { setProducts } = productsSlice.actions;
 export default productsSlice.reducer;
 
 export const getAllProductsThunk = () => (dispatch) => {
-  const url = `${process.env.BASE_URL}/products`;
+  const url = `${import.meta.env.VITE_BASE_URL}/products`;
 
   axios
     .get(url)

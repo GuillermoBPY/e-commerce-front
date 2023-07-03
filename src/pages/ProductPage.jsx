@@ -6,12 +6,13 @@ import SimilarProducts from "../components/ProductsPage/SimilarProducts";
 import SliderImgs from "../components/ProductsPage/SliderImgs";
 import LoadingPage from "../components/shared/LoadingPage";
 import "../styles/ProductPage.css";
-require("dotenv").config();
 
 const ProductPage = () => {
   const [product, setproduct] = useState();
   const { id } = useParams();
-  const url = `${process.env.BASE_URL}/products/${id}`;
+  const url = `${
+    import.meta.env.VITE_BASE_URL
+  }/products/${id}`;
 
   useEffect(() => {
     axios

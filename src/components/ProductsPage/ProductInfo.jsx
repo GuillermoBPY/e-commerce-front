@@ -73,7 +73,10 @@ const ProductInfo = ({ product }) => {
             </div>
           </div>
         </section>
-        <button onClick={handleAddOrUpdate}>
+        <button
+          className="btnproduct"
+          onClick={handleAddOrUpdate}
+        >
           {cartItemID ? "Update Quantity" : "Add to Cart"}
           <i className="bx bx-cart-add"></i>
         </button>

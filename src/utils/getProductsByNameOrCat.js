@@ -1,10 +1,11 @@
 import axios from "axios";
-require("dotenv").config();
 
 export const getProductsByNameOrCat =
   (data = "title=") =>
   (dispatch) => {
-    const url = `${process.env.BASE_URL}/products?${data}`;
+    const url = `${
+      import.meta.env.VITE_BASE_URL
+    }/products?${data}`;
 
     axios
       .get(url)

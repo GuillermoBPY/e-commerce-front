@@ -2,11 +2,12 @@ import axios from "axios";
 import Swal from "sweetalert2";
 import { getCartThunk } from "../store/slices/cart.slice";
 import config from "../store/slices/getConfig";
-require("dotenv").config();
 
 export const updateCartQtyThunk =
   (cartItemID, counter, cartItemQty) => (dispatch) => {
-    const url = `${process.env.BASE_URL}/cart/${cartItemID}`;
+    const url = `${
+      import.meta.env.VITE_BASE_URL
+    }/cart/${cartItemID}`;
     const data = {
       quantity: counter + cartItemQty,
     };
