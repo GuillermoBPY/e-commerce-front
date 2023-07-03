@@ -2,10 +2,11 @@ import axios from "axios";
 import Swal from "sweetalert2";
 import { getCartThunk } from "../store/slices/cart.slice";
 import config from "../store/slices/getConfig";
+require("dotenv").config();
 
 export const updateCartQtyThunk =
   (cartItemID, counter, cartItemQty) => (dispatch) => {
-    const url = `https://e-commerce-api-zove.onrender.com/api/v1/cart/${cartItemID}`;
+    const url = `${process.env.BASE_URL}/cart/${cartItemID}`;
     const data = {
       quantity: counter + cartItemQty,
     };

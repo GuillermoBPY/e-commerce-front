@@ -6,6 +6,7 @@ import AccordionPrice from "../components/Home/AccordionPrice";
 import CardProduct from "../components/Home/CardProduct";
 import LoadingPage from "../components/shared/LoadingPage";
 import "./styles/Home.css";
+require("dotenv").config();
 
 const Home = () => {
   const { products } = useSelector((state) => state);
@@ -20,7 +21,7 @@ const Home = () => {
   });
 
   const getProductsByName = (data = "title=") => {
-    const url = `https://e-commerce-api-zove.onrender.com/api/v1/products?${data}`;
+    const url = `${process.env.BASE_URL}/products?${data}`;
 
     axios
       .get(url)

@@ -5,14 +5,14 @@ import PurchaseCard from "../components/PurchasesPage/PurchaseCard";
 import LoadingPage from "../components/shared/LoadingPage";
 import config from "../store/slices/getConfig";
 import "./styles/Purchases.css";
+require("dotenv").config();
 
 const Purchases = () => {
   const { cart } = useSelector((state) => state);
   const [purchases, setpurchases] = useState();
 
   const getPurchases = () => {
-    const url =
-      "https://e-commerce-api-zove.onrender.com/api/v1/purchases";
+    const url = `${process.env.BASE_URL}/purchase`;
     axios
       .get(url, config)
       .then((res) => setpurchases(res.data))

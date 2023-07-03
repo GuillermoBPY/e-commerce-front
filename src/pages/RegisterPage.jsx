@@ -5,6 +5,7 @@ import Swal from "sweetalert2";
 import defaultValues from "../utils/defaultValues";
 import { Link, useNavigate } from "react-router-dom";
 import "./styles/RegisterPage.css";
+require("dotenv").config();
 const RegisterPage = () => {
   const {
     handleSubmit,
@@ -14,8 +15,7 @@ const RegisterPage = () => {
   } = useForm();
   const navigate = useNavigate();
   const submit = (data) => {
-    const url =
-      "https://e-commerce-api-zove.onrender.com/api/v1/users";
+    const url = `${process.env.BASE_URL}/users`;
     axios
       .post(url, data)
       .then((res) => {

@@ -6,11 +6,12 @@ import SimilarProducts from "../components/ProductsPage/SimilarProducts";
 import SliderImgs from "../components/ProductsPage/SliderImgs";
 import LoadingPage from "../components/shared/LoadingPage";
 import "../styles/ProductPage.css";
+require("dotenv").config();
 
 const ProductPage = () => {
   const [product, setproduct] = useState();
   const { id } = useParams();
-  const url = `https://e-commerce-api-zove.onrender.com/api/v1/products/${id}`;
+  const url = `${process.env.BASE_URL}/products/${id}`;
 
   useEffect(() => {
     axios

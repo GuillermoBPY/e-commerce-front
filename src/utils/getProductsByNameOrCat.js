@@ -1,9 +1,10 @@
 import axios from "axios";
+require("dotenv").config();
 
 export const getProductsByNameOrCat =
   (data = "title=") =>
   (dispatch) => {
-    const url = `https://e-commerce-api-zove.onrender.com/api/v1/products?${data}`;
+    const url = `${process.env.BASE_URL}/products?${data}`;
 
     axios
       .get(url)

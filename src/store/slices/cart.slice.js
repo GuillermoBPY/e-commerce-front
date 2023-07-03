@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 import config from "./getConfig";
+require("dotenv").config();
 
 const cartSlice = createSlice({
   name: "cart",
@@ -15,8 +16,7 @@ export default cartSlice.reducer;
 
 export const getCartThunk = () => (dispatch) => {
   if (localStorage.getItem("token")) {
-    const url =
-      "https://e-commerce-api-zove.onrender.com/api/v1/cart";
+    const url = `${process.env.BASE_URL}/cart`;
 
     axios
       .get(url, config)

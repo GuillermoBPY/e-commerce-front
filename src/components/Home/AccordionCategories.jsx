@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect } from "react";
+require("dotenv").config();
 
 const AccordionCategories = ({
   setfilteredProducts,
@@ -9,8 +10,7 @@ const AccordionCategories = ({
   setIsActive,
 }) => {
   const getAllCategories = () => {
-    const url =
-      "https://e-commerce-api-zove.onrender.com/api/v1/categories";
+    const url = `${process.env.BASE_URL}/categories`;
 
     axios
       .get(url)
@@ -18,7 +18,7 @@ const AccordionCategories = ({
       .catch((err) => err);
   };
   const getProductsByName = (data = "title=") => {
-    const url = `https://e-commerce-api-zove.onrender.com/api/v1/products?${data}`;
+    const url = `${process.env.BASE_URL}/products?${data}`;
 
     axios
       .get(url)

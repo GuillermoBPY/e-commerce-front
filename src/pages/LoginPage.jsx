@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import defaultValues from "../utils/defaultValues";
 import "./styles/LoginPage.css";
 import Swal from "sweetalert2";
+require("dotenv").config();
 const LoginPage = () => {
   const { register, handleSubmit, reset } = useForm();
   const [userdata, setuserdata] = useState();
@@ -12,8 +13,7 @@ const LoginPage = () => {
     useState();
 
   const submit = (data) => {
-    const url =
-      "https://e-commerce-api-zove.onrender.com/api/v1/users/login";
+    const url = `${process.env.BASE_URL}/users/login`;
     axios
       .post(url, data)
       .then((res) => {
