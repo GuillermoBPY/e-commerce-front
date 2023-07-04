@@ -64,11 +64,11 @@ const ProductInfo = ({ product }) => {
         <section>
           <div className="handleopbox">
             <h4>Quantity</h4>
-            <div onClick={handleminus}>
+            <div className="bxbtn" onClick={handleminus}>
               <i className="bx bx-minus-circle"></i>
             </div>
             <div>{counter}</div>
-            <div onClick={handleAdd}>
+            <div className="bxbtn" onClick={handleAdd}>
               <i className="bx bx-plus-circle"></i>
             </div>
           </div>
