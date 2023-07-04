@@ -15,7 +15,8 @@ const PurchaseCard = ({ purchase }) => {
           <h3>{product.title}</h3>
           <div>{quantity}UNT </div>
           <div className="purchasecard__data--price">
-            $ {quantity * Number(product.price)}
+            ${" "}
+            {(quantity * Number(product.price)).toFixed(2)}
           </div>
         </div>
       </article>

@@ -65,7 +65,7 @@ const CardProduct = ({ product }) => {
           <div className="cardProduct__info--price">
             <div className="textgray">Price</div>
             <div className="textdarkgrey">
-              $ {product.price}
+              $ {product.price.toFixed(2)}
             </div>
           </div>
           <button

@@ -38,7 +38,9 @@ const CartItem = ({ prodCart }) => {
             <li>
               <span>Amount</span>
               <span>
-                {prodCart.quantity * prodCart.product.price}
+                {(
+                  prodCart.quantity * prodCart.product.price
+                ).toFixed(2)}
               </span>
             </li>
           </ul>
