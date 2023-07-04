@@ -30,7 +30,7 @@ const AccordionCategories = ({
   };
 
   const handleClick = (categoryId) => {
-    getProductsByName(`category=${categoryId}`);
+    getProductsByName(`categoryId=${categoryId}`);
   };
   const accordionData = {
     title: "Categories",
