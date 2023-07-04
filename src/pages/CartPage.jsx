@@ -13,11 +13,13 @@ const CartPage = () => {
   useEffect(() => {
     if (cart?.length >= 1) {
       settotalAmount(
-        cart.reduce(
-          (acc, cv) =>
-            acc + cv.quantity * Number(cv.product.price),
-          0
-        )
+        cart
+          .reduce(
+            (acc, cv) =>
+              acc + cv.quantity * Number(cv.product.price),
+            0
+          )
+          .toFixed(2)
       );
     }
   }, [cart]);
