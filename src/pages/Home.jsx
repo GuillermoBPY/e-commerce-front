@@ -23,7 +23,6 @@ const Home = () => {
     const url = `${
       import.meta.env.VITE_BASE_URL
     }/products?${data}`;
-    console.log(url);
     axios
       .get(url)
       .then((res) => setfilteredProducts(res.data))
@@ -31,12 +30,10 @@ const Home = () => {
   };
 
   const handleSubmit = (e) => {
-    console.log("PRUEBA");
     e.preventDefault();
     const title = e.target.searchinput.value
       .trim()
       .toLowerCase();
-    console.log(title);
     getProductsByName(`title=${title}`);
     e.target.reset();
   };
@@ -84,7 +81,6 @@ const Home = () => {
             type="text"
           />
           <button>
-            <p>PRUEBA</p>
             <i className="bx bx-search-alt-2"></i>
           </button>
         </form>

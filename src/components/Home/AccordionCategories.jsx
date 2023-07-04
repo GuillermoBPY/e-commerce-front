@@ -22,7 +22,6 @@ const AccordionCategories = ({
     const url = `${
       import.meta.env.VITE_BASE_URL
     }/products?${data}`;
-    console.log(url);
     axios
       .get(url)
       .then((res) => setfilteredProducts(res.data))
