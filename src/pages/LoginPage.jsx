@@ -123,7 +123,10 @@ const LoginPage = () => {
         <form onSubmit={handleSubmit(submit)}>
           <h2>User Login</h2>
           <div className="testeruser">
-            <p>You must have and account!</p>
+            <p>You must have an account!</p>
+            <p>Test User</p>
+            <p>Email: testuser@academlo.com</p>
+            <p>Pass: 12345678</p>
           </div>
           <div className="inputbox">
             <label htmlFor="email">Email</label>
